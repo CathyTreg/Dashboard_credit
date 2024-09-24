@@ -22,7 +22,7 @@ st.sidebar.success("Naviguez dans les sections du dashboard.")
 # Charger les données des clients et les prédictions
 @st.cache_data
 def load_data():
-    return pd.read_csv("./clients_dashboard.csv")
+    return pd.read_csv("clients_dashboard.csv")
 
 # Page d'accueil
 st.subheader("➡️ Selectionnez un client dans la liste déroulante")
@@ -74,7 +74,7 @@ st.session_state.reponse_credit = reponse_credit
 st.session_state.proba_defaut = proba_defaut
 
 # Charger le modèle pour l'interprétation du score
-logistic_model = joblib.load("C:/Users/druar/OneDrive/Documents/01_Formations/1_Outils_ET_Metier/2024_DataScientist/ProjetsPython/P7/logistic_model.pkl")
+logistic_model = joblib.load("logistic_model.pkl")
 st.session_state.logistic_model = logistic_model
 
 X = clients_dashboard.drop(columns=['client_id'])
