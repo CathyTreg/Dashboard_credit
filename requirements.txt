@@ -6,4 +6,5 @@ joblib
 requests
 shap
 plotly
+matplotlib
 
