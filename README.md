@@ -1,4 +1,4 @@
-# P8_Dashboard : 
+# Dashboard crédit : 
 Création d'un dashboard interactif avec streamlit
 
 Dashboard de prédiction de score de crédit
