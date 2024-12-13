@@ -1,11 +1,31 @@
-# Dashboard crédit : 
-Création d'un dashboard interactif avec streamlit
+# Créer une API de scoring crédit et réaliser un DashBoard interactif - DASHBOARD
 
-Dashboard de prédiction de score de crédit
+Vous trouverez la partie modèle de scoring dans ce repertoire : https://github.com/CathyTreg/Modele_scoring
 
-Un outil de “scoring crédit” a récement été mis en place pour calculer la probabilité qu’un client rembourse son crédit, et classifier la demande en crédit accordé ou refusé.
-Ce dashboard interactif vous permet de visualiser les informations et les caractéristiques d'un client, de prédire sa probabilité de défaut de paiement et de savoir si son crédit est accepté au vu de cette probabilité.
-Il vous donnera tous les élémnents nécessaires pour expliquer de façon la plus transparente possible aux clients les décisions d’octroi de crédit.
+Contexte : L’entreprise « Prêt à dépenser » souhaite déployer un outil de scoring crédit pour calculer la probabilité qu’un client rembourse son crédit, en s’appuyant sur un modèle prédictif et un suivi en temps réel.
+
+Objectif : Mettre en place un modèle de prédiction des risques de faillite client, intégrer ce modèle via une API pour une utilisation dans un système de scoring en production, et déployer un dashboard interactif pour l’analyse des clients.
+
+Tâches :
+-	Développement du modèle de scoring :
+o	créer un modèle de régression logistique pour prédire la probabilité de défaut de paiement des clients ;
+o	Implémenter un suivi de la performance du modèle via la surveillance du Data Drift avec Evidently et l'utilisation de SHAP pour expliciter les décisions du modèle.
+-	Mise en production avec une API :
+o	développer une API REST avec Flask permettant de recevoir des données et renvoyer des prédictions de scoring ;
+o	déployer l'API en continu avec GitHub Actions via Azure WebApp pour garantir la mise à jour automatique du modèle en production ;
+o	créer des tests unitaires avec Unittest pour assurer la qualité et la stabilité du code via une exécution automatisée lors du déploiement.
+-	Développement d’un Dashboard Interactif :
+o	concevoir un dashboard interactif avec Streamlit permettant aux chargés d’études de visualiser la probabilité de solvabilité d’un client et d’interpréter les résultats du scoring en temps réel ;
+o	mettre en place une interface utilisateur facilitant la compréhension des décisions du modèle grâce à des visualisations et des explications détaillées des prédictions.
+
+Résultats : 
+-	Évaluation en temps réel de la solvabilité des clients, fournissant des informations précises et expliquées à un chargé d’études, ce qui améliore la prise de décision dans l'octroi de crédits.
+-	Grâce à l'intégration d'une approche MLOps, le modèle est facilement évolutif et peut être régulièrement mis à jour pour s'adapter aux nouvelles tendances et comportements clients.
+
+Environnement de travail :
+-	Outils de Développement : Jupyter Notebook, Python (via Anaconda), GitHub Actions
+-	Outils de Machine Learning : Scikit-learn, MLFlow UI, Evidently (Data Drift), SHAP, Smote
+-	Outils de déploiement et visualisation : Flask pour l'API, Azure WebApp, Streamlit pour le dashboard interactif, Unittest pour les tests automatisés.
 
 Lien Streamlit (la web app n'est plus active) : https://p8dashboard-iahha89fm7h6syqqkwvetu.streamlit.app/
 
